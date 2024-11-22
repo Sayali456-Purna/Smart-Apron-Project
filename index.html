@@ -60,7 +60,7 @@
 
         
         <div class="text-center border rounded-md shadow shadow-md shadow-gray-400 py-10" id="bodyTemp">Body Temperature </div>
-        <div class="text-center border rounded-md shadow shadow-md shadow-gray-400 py-10" id="bloodPressure">Blood Pressure </div>
+        <div class="text-center border rounded-md shadow shadow-md shadow-gray-400 py-10" id="Alert">Alert </div>
         <div class="text-center border rounded-md shadow shadow-md shadow-gray-400 py-10" id="heartPulse">Heart Pulse </div>
         <div class="text-center border rounded-md shadow shadow-md shadow-gray-400 py-10" id="timestamp">Timestamp </div>
         <div class="hidden md:block"></div>
@@ -81,7 +81,7 @@
 
                     // Display each field in its respective div
                     document.getElementById("bodyTemp").innerHTML = "<b>Body Temperature</b> <br>" + feed.field1;
-                    document.getElementById("bloodPressure").innerHTML = "<b>Blood Pressure</b> <br>" + feed.field2;
+                    document.getElementById("Alert").innerHTML = "<b>Alert</b> <br>" + feed.field2;
                     document.getElementById("heartPulse").innerHTML = "<b>Heart Pulse</b> <br>" + feed.field3;
                     document.getElementById("salineBagStatus").innerHTML = "<b>Saline Bag Status</b> <br>" + (feed.field4 === "1" ? '<div class="mx-10 border rounded-md bg-yellow-300 p-1">Low</div>' : '<div class="mx-10 border rounded-md bg-green-300 p-1">Normal</div>');
                     document.getElementById("urineBagStatus").innerHTML = "<b>Urine Bag Status</b> <br>" + (feed.field5 === "1" ? '<div class="mx-10 border rounded-md bg-red-400 p-1">Full</div>' : '<div class="mx-10 border rounded-md bg-green-400 p-1">Not Full</div>');
